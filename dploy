@@ -1,9 +1,0 @@
-name: demo
-scheme: ftp
-host: ftp.demo.com
-port: 21
-user: USER
-pass: PASS
-path-local: /var/www/demo/
-path-remote: public_html/demo/
-----next----
