@@ -5,9 +5,6 @@ An FTP deployment tool build with bash.
 This will run in any linux machine with out any requirements.
 You can upload your code to a number of machines.
 
-This version will upload all files.
-A later version will most probably hold the update date of the files uploaded and will not upload if the file has not been updated
-
 
 Install
 =======
@@ -21,7 +18,7 @@ The dploy file will hold all the server requirements.
 All of the attribitutes are required. Skipping one at this point, will most definetely break something.
 
 ```
-name: demo
+name: server 1
 scheme: ftp
 host: ftp.myserver.com
 port: 21
@@ -29,7 +26,18 @@ user: USER
 pass: PASSWORD
 path-local: /var/www/dploy/
 path-remote: public_html/
-----next----
+save-dates: false
+----NEXT----
+name: server 2
+scheme: ftp
+host: ftp.myserver.com
+port: 21
+user: USER
+pass: PASSWORD
+path-local: /var/www/dploy/
+path-remote: public_html/
+save-dates: true
+----NEXT----
 ```
 
 You can add multiple servers, with the same format.
@@ -54,8 +62,6 @@ Warnings
 
 This is my first bash file, so things might not work as expected.
 Feel free to Optimize the script if you feel something needs changed.
-This is an initiale first version, where it simply works.
-There are a lot that will change later on
 
 
 Licence
